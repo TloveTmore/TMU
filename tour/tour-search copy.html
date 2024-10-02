@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="keywords" content="HTML5 Template" />
+  <meta name="description" content="Ciyatrip" />
+  <meta name="author" content="potenzaglobalsolutions.com" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Ciyatrip</title>
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="images/favicon.ico" />
+  <!-- Google Font -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500&amp;family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&amp;display=swap"
+    rel="stylesheet">
+
+  <!-- CSS Global Compulsory (Do not remove)-->
+  <link rel="stylesheet" href="css/fontawesome/all.min.css" />
+  <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css" />
+  <!-- Page CSS Implementing Plugins (Remove the plugin CSS here if site does not use that feature)-->
+  <link rel="stylesheet" href="css/datetimepicker/datetimepicker.min.css" />
+  <link rel="stylesheet" href="css/select2/select2.css" />
+  <link rel="stylesheet" href="css/range-slider/ion.rangeSlider.css" />
+  <!-- Template Style -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <!--=================================
+    Header -->
+  <header class="header header-sticky default"></header>
+  <!--=================================
+      Header -->
+  <!--=================================
+      Search -->
+  <div id="search">
+    <button type="button" class="close">×</button>
+    <form>
+      <input type="search" value="" placeholder="type keyword(s) here" />
+      <button type="submit" class="btn btn-primary">Search</button>
+    </form>
+  </div>
+  <!--=================================
+      Search -->
+  <!--=================================
+      Header Inner -->
+  <section class="header-inner header-inner-menu bg-overlay-secondary"
+    style="background-image: url('images/bg/01.jpg');">
+    <div class="container">
+      <div class="row d-flex justify-content-center">
+        <div class="col-md-12 position-relative">
+          <div class="header-inner-title">
+            <div class="section-title">
+              <div class="sub-title"><img class="img-fluid" src="images/title-icon.png" alt="#">
+                <span></span>
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a class="text-white text-uppercase" href="index.html">Trang chủ</a></li>
+                  <li class="breadcrumb-item active">Tour hiện có</li>
+                </ol>
+              </div>
+              <h2 class="title text-white"><strong>Tour hiện có</strong></h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="header-inner-shape" style="background-image: url('images/bg/02.png');"></div>
+  </section>
+  <!--=================================
+      Header Inner -->
+  <!--=================================
+      Tour Search -->
+  <section class="space-ptb">
+    <div class="container">
+      <div class="row my-2">
+        <div class="col-lg-4">
+          <div class="sidebar">
+            <div class="widget">
+              <div class="widget-title">
+                <h5 class="title fw-600">Tìm chuyến đi phù hợp</h5>
+              </div>
+              <div class="widget-content">
+                <div class="mb-3 select-border">
+                  <select class="form-control city">
+                    <option selected>Địa điểm</option>
+                  </select>
+                </div>
+                <div class="mb-3 form-location form-datepicker datetimepickers">
+                  <div class="input-group date" id="datetimepicker-01" data-target-input="nearest">
+                    <input type="text" class="form-control datetimepicker-input border-end-0"
+                      placeholder="Chọn ngày khởi hành" data-target="#datetimepicker-01">
+                    <div class="input-group-append" data-target="#datetimepicker-01" data-toggle="datetimepicker">
+                      <div class="input-group-text h-100 bg-white"><i class="far fa-calendar-alt"></i></div>
+                    </div>
+                  </div>
+                </div>
+                <!-- <div class="mb-0 select-border">
+                  <select class="form-control basic-select" aria-label="Default select example">
+                    <option selected>Loại tour</option>
+                    <option value="3">Trong ngày</option>
+                    <option value="4">Nhiều ngày</option>
+                  </select>
+                </div> -->
+              </div>
+            </div>
+            <div class="widget">
+              <div class="widget-title">
+                <h5 class="title fw-600">Lọc theo giá</h5>
+              </div>
+              <div class="widget-content">
+                <div class="mb-3">
+                  <div class="collapse show" id="price">
+                    <div class="property-price-slider">
+                      <input type="text" id="property-price-slider" name="example_name" value="" />
+                    </div>
+                  </div>
+                </div>
+                <div class="price-filter d-flex">
+                  <a class="ms-auto" href="#"><i class="fas fa-filter"></i>Lọc</a>
+                </div>
+              </div>
+            </div>
+            <div class="widget">
+              <div class="widget-title">
+                <h5 class="title fw-600">Danh mục</h5>
+              </div>
+              <div class="widget-content">
+                <div class="popular-tag">
+                  <ul class="list-unstyled mb-0 category">
+                    <li><a style="cursor: pointer;"> Biển</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-8">
+          <div class="row align-items-center">
+            <div class="col-lg-8 mb-3 mb-lg-0">
+              <p class="mb-0">Tìm thấy 5 kết quả</p>
+            </div>
+            <div class="col-lg-4">
+              <div class="select-border">
+                <select class="form-control basic-select">
+                  <option value="1" selected="selected">Sắp xếp mặc định</option>
+                  <option value="2">Yêu thích</option>
+                  <option value="3">Mới nhất</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-md-12">
+              <hr class="mb-0">
+            </div>
+          </div>
+          <div class="row pt-5 tour__list">
+
+            <div class="col-lg-6 col-md-6 mb-4 tour__info">
+              <div class="listing-item">
+                <div class="listing-image bg-overlay-half-bottom">
+                  <img class="img-fluid"
+                    src="https://wiki-travel.com.vn/Uploads/picture/Viet_Dung-182604102645-Quy%20Nh%C6%A1n.jpg" alt="#">
+                  <!-- <div class="listing-favourite   listing-like">
+                    <i class="fa-solid fa-heart"></i>
+                  </div> -->
+                </div>
+                <div class="listing-details">
+                  <div class="listing-title d-flex justify-content-between" style="min-height: 6rem;">
+                    <h5 class="mb-0"><a href="tour-detail.html" class="title mb-0">Tour Xe Lửa Miền Trung 3N4Đ: Khám Phá
+                        Quy Nhơn - Phú Yên</a></h5>
+                  </div>
+                  <a href="#" class="listing-loaction text-capitalize"> <i class="fa fa-location-dot"></i><!-- Thành phố --></a> 
+                  <div class="listing-rating d-flex justify-content-between">
+                    <div class="d-flex">
+                      <div class="date me-3">
+                        <i class="fa-regular fa-calendar-days me-2"></i><span> 3 Ngày </span>
+                      </div>
+                      <div class="rating">
+                        <i class="fa-solid fa-star me-1 text-yellow"></i><span>4.0 / 5</span>
+                      </div>
+                    </div>
+                    <div class="price tour__price">
+                      <span class="text-decoration-line-through"></span>8.380K
+                    </div>
+                  </div>
+                  <a href="tour-detail.html" class="btn btn-link mt-2">Xem chi tiết</a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <style>
+            .row.pt-5 img {
+              min-height: 20rem;
+              object-fit: cover;
+              /* Tùy chọn: giữ tỷ lệ khung hình */
+              width: 100%;
+              /* Tùy chọn: đảm bảo hình ảnh rộng đầy đủ */
+            }
+          </style>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--=================================
+      Tour Search -->
+  <!--=================================
+      footer-->
+  <footer class="footer">
+    <div class="min-footer bg-light">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="newsletter">
+              <h3 class="fw-bold mb-0 newsletter-title">Newsletter</h3>
+              <div class="footer-subscribe">
+                <form>
+                  <input type="email" class="form-control border-0" placeholder="Email">
+                  <button type="submit" class="btn btn-primary">Get Notified</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 col-md-12">
+            <a class="footer-logo" href="index.html">
+              <img class="img-fluid" src="images/logo.png" alt="logo">
+            </a>
+            <p class="mt-4 mb-0">Give yourself the power of responsibility. Remind yourself the only thing stopping you
+              is yourself.</p>
+            <div class="social-icon mt-4 mt-lg-5">
+              <ul>
+                <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mt-4 mt-md-5 mt-lg-0">
+            <div class="footer-link">
+              <h6 class="footer-title fw-600">Contact Travel</h6>
+              <div class="footer-contact-info">
+                <ul class="list-unstyled mb-0">
+                  <li><img class="img-fluid" src="images/address.png" alt=""><span class="address">17504 Carlton Cuevas
+                      Rd, Gulfport, MS, 39503</span></li>
+                  <li><img class="img-fluid" src="images/phone.png" alt=""><span class="phone">+(704) 279-1249</span>
+                  </li>
+                  <li><img class="img-fluid" src="images/email.png" alt=""><span
+                      class="email">letstalk@Ciyatrip.com</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mt-4 mt-md-5 mt-lg-0 position-relative">
+            <img class="img-fluid footer-map" src="images/footer-map.png" alt="logo">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="row align-items-center copyright">
+          <div class="col-12 col-md-6 text-center text-md-start">
+            <div class="copyright-menu footer-menu">
+              <ul class="mb-0 justify-content-center justify-content-md-start">
+                <li><a class="text-black" href="#">Term & Conditions</a></li>
+                <li><a class="text-black" href="#">Privacy Policy </a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 text-center text-md-end mt-2 mt-md-0">
+            <p class="mb-0"> &copy; Copyright <span id="copyright">
+                <script>document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))</script>
+              </span> <a href="index.html"> Ciyatrip </a> All Rights Reserved</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!--=================================
+      footer-->
+  <!--=================================
+      Back To Top-->
+  <div id="back-to-top" class="back-to-top">
+    <a href="#"><i class="fas fa-angle-up"></i></a>
+  </div>
+  <!--=================================
+      Back To Top-->
+  <!--=================================
+      Javascript -->
+  <!-- JS Global Compulsory (Do not remove)-->
+  <script src="js/jquery-3.6.0.min.js"></script>
+  <script src="js/jquery.appear.js"></script>
+  <script src="js/popper/popper.min.js"></script>
+  <script src="js/bootstrap/bootstrap.min.js"></script>
+  <!-- Page JS Implementing Plugins (Remove the plugin script here if site does not use that feature)-->
+  <script src="js/datetimepicker/moment.min.js"></script>
+  <script src="js/datetimepicker/datetimepicker.min.js"></script>
+  <script src="js/select2/select2.full.js"></script>
+  <script src="js/range-slider/ion.rangeSlider.min.js"></script>
+  <!-- Template Scripts (Do not remove)-->
+  <script src="js/custom.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>
