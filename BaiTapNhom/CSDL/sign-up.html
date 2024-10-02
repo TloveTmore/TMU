@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="keywords" content="HTML5 Template" />
+  <meta name="description" content="Ciyatrip" />
+  <meta name="author" content="potenzaglobalsolutions.com" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Ciyatrip - Đăng ký</title>
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="images/favicon.ico" />
+  <!-- Google Font -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500&amp;family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&amp;display=swap"
+    rel="stylesheet">
+
+  <!-- CSS Global Compulsory (Do not remove)-->
+  <link rel="stylesheet" href="css/fontawesome/all.min.css" />
+  <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css" />
+
+  <!-- Template Style -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <!--=================================
+        Header -->
+  <header class="header header-transparent-2">
+    <div class="container-fluid">
+      <div class="row align-items-center justify-content-end">
+        <div class="col-lg-12">
+          <a class="navbar-brand" href="index.html">
+            <img class="img-fluid" src="images/logo-dark.svg" alt="logo">
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!--=================================
+        Header -->
+
+  <!--=================================
+      sign in -->
+  <section class="sign-in sign-up bg-holder">
+    <div class="container-fluid">
+      <div class="row justify-content-between">
+        <div class="col-lg-12 col-xl-7 align-self-center order-2 order-xl-1">
+          <div class="sign-in-content h-100">
+            <div class="section-title text-center">
+              <h2 class="primary-text">Tạo tài khoản</h2>
+            </div>
+            <h6 class="d-flex justify-content-center d-none" style="color: red;">Tên đăng nhập đã tồn tại!</h6>
+            <form class="row mt-4 mb-4 mb-sm-5 align-items-center form-flat-style" action="backend/add.php?user"
+              method="post">
+              <div class="mb-3 col-sm-12">
+                <label class="form-label">Họ và tên:</label>
+                <input type="text" class="form-control" name="name" required>
+              </div>
+              <div class="mb-3 col-sm-12">
+                <label class="form-label">Tên đăng nhập:</label>
+                <input type="text" class="form-control" name="user_name" required>
+              </div>
+              <div class="mb-3 col-sm-12">
+                <label class="form-label">Email:</label>
+                <input type="text" class="form-control" name="email" required>
+              </div>
+              <div class="mb-3 col-sm-12">
+                <label class="form-label">Mật khẩu:</label>
+                <input type="Password" class="form-control" name="password" required>
+              </div>
+              <!-- <div class="mb-3 col-sm-12">
+                        <label class="form-label">Xác thực mật khẩu:</label>
+                        <input type="Password" class="form-control" name="name">
+                      </div> -->
+              <div class="col-sm-5 d-grid">
+                <button type="submit" class="btn btn-primary btn-flat">Đăng ký</button>
+              </div>
+              <div class="col-sm-7">
+                <ul class="list-unstyled d-flex mb-1 mt-sm-0 mt-3 justify-content-sm-end">
+                  <li class="me-1">Bạn đã có tài khoản? <a class="text-dark" href="sign-in.html">Đăng nhập</a></li>
+                </ul>
+              </div>
+            </form>
+          </div>
+        </div>
+        <script>
+          if (window.location.href.includes('?error=true')) {
+            document.querySelector('h6.d-none').classList.remove('d-none')
+          }
+        </script>
+        <div class="col-lg-12 col-xl-4 g-0 order-1 order-xl-2">
+          <div class="sign-in-bg h-100 px-5 py-5 align-items-center justify-content-center d-flex text-center"
+            style="background-image: url(images/error/01.png);">
+            <div class="sing-title">
+              <h1 class="text-white mb-0">Xin chào bạn!</h1>
+              <p class="text-white">Hãy đăng nhập và khám phá những tour du lịch ngay thôi nào.</p>
+              <a href="sign-in.html" class="btn btn-primary">Đăng nhập</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--=================================
+      sign in -->
+
+  <!--=================================
+    Javascript -->
+  <!-- JS Global Compulsory (Do not remove)-->
+  <script src="js/jquery-3.6.0.min.js"></script>
+  <script src="js/jquery.appear.js"></script>
+  <script src="js/popper/popper.min.js"></script>
+  <script src="js/bootstrap/bootstrap.min.js"></script>
+
+  <!-- Template Scripts (Do not remove)-->
+  <script src="js/custom.js"></script>
+</body>
+
+</html>

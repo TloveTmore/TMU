@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="keywords" content="HTML5 Template" />
+  <meta name="description" content="Ciyatrip" />
+  <meta name="author" content="potenzaglobalsolutions.com" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Ciyatrip - Đăng nhập</title>
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="images/favicon.ico" />
+  <!-- Google Font -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500&amp;family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&amp;display=swap"
+    rel="stylesheet">
+
+  <!-- CSS Global Compulsory (Do not remove)-->
+  <link rel="stylesheet" href="css/fontawesome/all.min.css" />
+  <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css" />
+
+  <!-- Template Style -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <!--=================================
+        Header -->
+  <header class="header header-transparent-2 sign-header">
+    <div class="container-fluid">
+      <div class="row align-items-center justify-content-end">
+        <div class="col-lg-12">
+          <a class="navbar-brand" href="index.html">
+            <img class="img-fluid" src="images/logo-white.svg" alt="logo">
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!--=================================
+        Header -->
+
+  <!--=================================
+        sign in -->
+  <section class="sign-in bg-holder vh-100">
+    <div class="container-fluid">
+      <div class="row justify-content-between vh-100">
+        <div class="col-lg-12 col-xl-4 g-0">
+          <div class="sign-in-bg h-100 px-5 py-5 align-items-center justify-content-center d-flex text-center"
+            style="background-image: url(images/error/01.png);">
+            <div class="sing-title">
+              <h1 class="text-white mb-0">Xin chào bạn!</h1>
+              <p class="text-white">Nếu bạn chưa có tài khoản hãy tham gia cùng chúng tôi</p>
+              <a href="sign-up.html" class="btn btn-primary">Đăng ký</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-12 col-xl-7 align-self-center">
+          <div class="sign-in-content h-100">
+            <div class="section-title text-center">
+              <h2 class="primary-text">Đăng nhập tài khoản</h2>
+            </div>
+            <h6 class="d-flex justify-content-center d-none true" style="color: rgb(7, 150, 7);">Đăng ký tài khoản thành công!</h6>
+            <h6 class="d-flex justify-content-center d-none false" style="color: red">Sai tài khoản mật khẩu!</h6>
+            <form class="row mt-4 mb-4 mb-sm-5 align-items-center form-flat-style" action="backend/auth.php" method="post">
+              <div class="mb-3 col-sm-12">
+                <label class="form-label">Tên đăng nhập:</label>
+                <input type="text" class="form-control" name="user_name">
+              </div>
+              <div class="mb-3 col-sm-12">
+                <label class="form-label">Mật khẩu:</label>
+                <input type="Password" class="form-control" name="password">
+              </div>
+              <div class="col-sm-6 d-grid">
+                <button type="submit" class="btn btn-primary btn-flat">Đăng nhập</button>
+              </div>
+              <div class="col-sm-6">
+                <ul class="list-unstyled d-flex mb-1 mt-sm-0 mt-3 justify-content-sm-end">
+                  <li class="me-1">Bạn chưa có tài khoản? <a class="text-dark" href="sign-up.html">Đăng ký ngay</a></li>
+                </ul>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    var user_name= new URLSearchParams(window.location.search).get('login')
+    if (window.location.href.includes('?login=')) {
+      document.querySelector('h6.true').classList.remove('d-none')
+      document.querySelector('input[name="name"]').value=user_name
+    } else if(window.location.href.includes('?error=true')) {
+      document.querySelector('h6.false').classList.remove('d-none')
+    }
+  </script>
+  <!--=================================
+        sign in -->
+
+  <!--=================================
+        Javascript -->
+  <!-- JS Global Compulsory (Do not remove)-->
+  <script src="js/jquery-3.6.0.min.js"></script>
+  <script src="js/jquery.appear.js"></script>
+  <script src="js/popper/popper.min.js"></script>
+  <script src="js/bootstrap/bootstrap.min.js"></script>
+
+  <!-- Template Scripts (Do not remove)-->
+  <script src="js/custom.js"></script>
+</body>
+
+</html>

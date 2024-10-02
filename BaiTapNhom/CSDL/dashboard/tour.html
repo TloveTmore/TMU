@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>CiyaTrip</title>
+    <link rel="shortcut icon" href="../images/favicon.ico" />
+
+    <link rel="stylesheet" href="css/bootstrap1.min.css" />
+
+    <link rel="stylesheet" href="vendors/themefy_icon/themify-icons.css" />
+
+    <link rel="stylesheet" href="vendors/swiper_slider/css/swiper.min.css" />
+
+    <link rel="stylesheet" href="vendors/select2/css/select2.min.css" />
+
+    <link rel="stylesheet" href="vendors/niceselect/css/nice-select.css" />
+
+    <link rel="stylesheet" href="vendors/owl_carousel/css/owl.carousel.css" />
+
+    <link rel="stylesheet" href="vendors/gijgo/gijgo.min.css" />
+
+    <link rel="stylesheet" href="vendors/font_awesome/css/all.min.css" />
+    <link rel="stylesheet" href="vendors/tagsinput/tagsinput.css" />
+
+    <link rel="stylesheet" href="vendors/datatable/css/jquery.dataTables.min.css" />
+    <link rel="stylesheet" href="vendors/datatable/css/responsive.dataTables.min.css" />
+    <link rel="stylesheet" href="vendors/datatable/css/buttons.dataTables.min.css" />
+
+    <link rel="stylesheet" href="vendors/text_editor/summernote-bs4.css" />
+
+    <link rel="stylesheet" href="vendors/morris/morris.css">
+
+    <link rel="stylesheet" href="vendors/material_icon/material-icons.css" />
+
+    <link rel="stylesheet" href="css/metisMenu.css">
+
+    <link rel="stylesheet" href="css/style1.css" />
+    <link rel="stylesheet" href="css/colors/default.css" id="colorSkinCSS">
+</head>
+
+<body class="crm_body_bg">
+    <div id="sidebar"></div>
+    <section class="main_content dashboard_part">
+        <div class="container-fluid g-0"></div>
+
+        <div class="main_content_iner ">
+            <div class="container-fluid plr_30 body_white_bg pt_30">
+                <div class="row justify-content-center">
+                    <div class="col-md-12">
+                        <div class="white_box QA_section">
+                            <div class="white_box_tittle list_header">
+                                <h4>Tổng hợp tour du lịch</h4>
+                                <div class="box_right d-flex lms_block">
+                                    <div class="serach_field_2">
+                                        <div class="search_inner">
+                                            <form Active="#">
+                                                <div class="search_field">
+                                                    <input type="text" placeholder="Tìm kiếm" id="searchInput">
+                                                </div>
+                                                <button type="submit"> <i class="ti-search"></i> </button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <button class="btn_1 full_width text-center ms-5"
+                                        onclick="document.querySelector('.modal-content').classList.remove('d-none')">
+                                        Thêm Tour mới
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="modal-content cs_modal my-2 d-none">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">Thêm tour du lịch mới</h5>
+                                </div>
+                                <div class="modal-body">
+                                    <form method="POST" action="../backend/add.php?tour=true" class="form__data">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label for="f__1">Tên tour du lịch</label>
+                                                <input type="text" class="form-control" id="f__1"
+                                                    placeholder="Tên tour du lịch" name="title">
+                                            </div>
+                                            <div class="col-md-3">
+                                                <label for="f__2">Khu vực</label>
+                                                <input type="text" class="form-control" id="f__2" placeholder="Khu vực"
+                                                    name="city">
+                                            </div>
+                                            <div class="col-md-3">
+                                                <label for="f__3">Điểm khởi hành</label>
+                                                <input type="text" class="form-control" id="f__3"
+                                                    placeholder="Điểm khởi hành" name="address">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label for="img">Link hình ảnh - <a href="https://upanh.tv/?lang=vi"
+                                                        target="_blank">Lấy link nếu là file</a></label>
+                                                <input type="text" class="form-control" name="img" id="img">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="price">Giá tour</label>
+                                                <input type="number" class="form-control" name="price" id="price"
+                                                    min="100" step="100">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label for="datein">Ngày đi</label>
+                                                <input type="date" name="datein" id="datein">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="dateout">Ngày về</label>
+                                                <input type="date" name="dateout" id="dateout">
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <label for="f__4">Nội dung</label>
+                                            <textarea name="detail" id="f__4"
+                                                placeholder="Nội dung chuyến đi"></textarea>
+                                        </div>
+                                        <div class="trip row">
+                                            <label>Hành trình</label>
+                                            <div class="col-md-6">
+                                                <label for="title_trip">Tiêu đề</label>
+                                                <input type="text" name="title_trip" id="title_">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="stitle_trip">Chi tiết</label>
+                                                <input type="text" name="stitle_trip" id="stitle_trip">
+                                            </div>
+                                        </div>
+                                        <div class="d-flex justify-content-center">
+                                            <a style="cursor: pointer;" class="btn_4 text-center mx-2"
+                                                onclick="document.querySelector('.modal-content').classList.add('d-none')">Đóng</a>
+                                            <button type="submit" class="btn_2 text-center mx-2">Đăng</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="QA_table recipes_table" id="dataTableExample">
+                                <table class="table table-hover recipes_table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">#</th>
+                                            <th scope="col">Tên</th>
+                                            <th scope="col">Khu vực</th>
+                                            <th scope="col">Thời gian</th>
+                                            <th scope="col">Giá</th>
+                                            <th scope="col">Thao tác</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <div class="flex-shrink-0">
+                                                        <img class="circle-rounded me-3" src="img/messages/1.png" alt
+                                                            width="30" height="30">
+                                                    </div>
+                                                    <div class="flex-grow-1 ms-3">
+                                                        <p>Mark Wiyns</p>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="text-capitalize">
+                                                <p> Money Receipt</p>
+                                            </td>
+                                            <td>
+                                                12:22 PM
+                                            </td>
+                                            <td><a class="status_btn">590.000VNĐ</a></td>
+                                            <td>
+                                                <a class="tour__edit" style="cursor: pointer;"><svg xmlns="http://www.w3.org/2000/svg" height="1em"
+                                                        viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                                                        <path
+                                                            d="M441 58.9L453.1 71c9.4 9.4 9.4 24.6 0 33.9L424 134.1 377.9 88 407 58.9c9.4-9.4 24.6-9.4 33.9 0zM209.8 256.2L344 121.9 390.1 168 255.8 302.2c-2.9 2.9-6.5 5-10.4 6.1l-58.5 16.7 16.7-58.5c1.1-3.9 3.2-7.5 6.1-10.4zM373.1 25L175.8 222.2c-8.7 8.7-15 19.4-18.3 31.1l-28.6 100c-2.4 8.4-.1 17.4 6.1 23.6s15.2 8.5 23.6 6.1l100-28.6c11.8-3.4 22.5-9.7 31.1-18.3L487 138.9c28.1-28.1 28.1-73.7 0-101.8L474.9 25C446.8-3.1 401.2-3.1 373.1 25zM88 64C39.4 64 0 103.4 0 152V424c0 48.6 39.4 88 88 88H360c48.6 0 88-39.4 88-88V312c0-13.3-10.7-24-24-24s-24 10.7-24 24V424c0 22.1-17.9 40-40 40H88c-22.1 0-40-17.9-40-40V152c0-22.1 17.9-40 40-40H200c13.3 0 24-10.7 24-24s-10.7-24-24-24H88z" />
+                                                    </svg></a>
+                                                <a class="tour__del" style="cursor: pointer;"><svg xmlns="http://www.w3.org/2000/svg" height="1em"
+                                                        viewBox="0 0 448 512">
+                                                        <path
+                                                            d="M135.2 17.7L128 32H32C14.3 32 0 46.3 0 64S14.3 96 32 96H416c17.7 0 32-14.3 32-32s-14.3-32-32-32H320l-7.2-14.3C307.4 6.8 296.3 0 284.2 0H163.8c-12.1 0-23.2 6.8-28.6 17.7zM416 128H32L53.2 467c1.6 25.3 22.6 45 47.9 45H346.9c25.3 0 46.3-19.7 47.9-45L416 128z" />
+                                                    </svg></a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer_part">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-12 col-sm-12">
+                            <div class="footer_iner text-center">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <script>
+        // Lấy tham chiếu đến ô tìm kiếm
+        var searchInput = document.getElementById("searchInput");
+
+        // Lấy tham chiếu đến bảng và các hàng dữ liệu
+        var table = document.getElementById("dataTableExample");
+        var rows = table.getElementsByTagName("tr");
+
+        // Bắt sự kiện người dùng nhập vào ô tìm kiếm
+        searchInput.addEventListener("input", function () {
+            var searchText = searchInput.value.toLowerCase();
+            // Duyệt qua các hàng dữ liệu và ẩn hoặc hiển thị dựa trên kết quả tìm kiếm
+            for (var i = 1; i < rows.length; i++) { // Bắt đầu từ 1 để bỏ qua hàng tiêu đề
+                var row = rows[i];
+                var shouldShowRow = false;
+
+                // Duyệt qua tất cả các ô của hàng và kiểm tra xem chúng có chứa chuỗi tìm kiếm không
+                for (var j = 0; j < row.cells.length - 1; j++) {
+                    var cell = row.cells[j];
+                    var cellText = cell.textContent.toLowerCase();
+
+                    if (cellText.includes(searchText)) {
+                        shouldShowRow = true;
+                        break;
+                    }
+                }
+
+                if (shouldShowRow) {
+                    row.style.display = "";
+                } else {
+                    row.style.display = "none";
+                }
+            }
+        });
+    </script>
+    <script src="js/jquery1-3.4.1.min.js"></script>
+
+    <script src="js/popper1.min.js"></script>
+
+    <script src="js/bootstrap1.min.js"></script>
+
+    <script src="js/metisMenu.js"></script>
+
+    <script src="vendors/count_up/jquery.waypoints.min.js"></script>
+
+    <script src="vendors/chartlist/Chart.min.js"></script>
+
+    <script src="vendors/count_up/jquery.counterup.min.js"></script>
+
+    <script src="vendors/swiper_slider/js/swiper.min.js"></script>
+
+    <script src="vendors/niceselect/js/jquery.nice-select.min.js"></script>
+
+    <script src="vendors/owl_carousel/js/owl.carousel.min.js"></script>
+
+    <script src="vendors/gijgo/gijgo.min.js"></script>
+
+    <script src="vendors/datatable/js/jquery.dataTables.min.js"></script>
+    <script src="vendors/datatable/js/dataTables.responsive.min.js"></script>
+    <script src="vendors/datatable/js/dataTables.buttons.min.js"></script>
+    <script src="vendors/datatable/js/buttons.flash.min.js"></script>
+    <script src="vendors/datatable/js/jszip.min.js"></script>
+    <script src="vendors/datatable/js/pdfmake.min.js"></script>
+    <script src="vendors/datatable/js/vfs_fonts.js"></script>
+    <script src="vendors/datatable/js/buttons.html5.min.js"></script>
+    <script src="vendors/datatable/js/buttons.print.min.js"></script>
+    <script src="js/chart.min.js"></script>
+
+    <script src="vendors/progressbar/jquery.barfiller.js"></script>
+
+    <script src="vendors/tagsinput/tagsinput.js"></script>
+
+    <script src="vendors/text_editor/summernote-bs4.js"></script>
+    <script src="vendors/apex_chart/apexcharts.js"></script>
+
+    <script src="js/custom.js"></script>
+</body>
+
+</html>
